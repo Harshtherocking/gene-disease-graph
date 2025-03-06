@@ -54,7 +54,7 @@ class GraphLoader:
         
         # Create a DGL graph
         graph = dgl.graph((src_nodes, dst_nodes))
-        graph.ndata['ids'] = torch.tensor(list(self.encoder.get_mapping().values()))
+        graph.ndata['ids'] = torch.tensor(list(self.encoder.get_mapping().values()), dtype = torch.long)
         
         return graph
     
@@ -70,7 +70,9 @@ class GraphLoader:
         print(f"Graph saved successfully to {self.output_path}")
 
 if __name__ == "__main__":
-    input_file = "gene-disease-graph/DG-Miner_miner-disease-gene.tsv"  # Example input path
-    output_file = "output/graph.bin"  # Example output path
+    home =  os.getcwd()
+    print(home)
+    input_file =  os.path.join(home, "DG-Miner_miner-disease-gene.tsv")
+    output_file =  os.path.join(home, "GRAPH")
     graph_loader = GraphLoader(input_file, output_file)
     graph_loader.process()

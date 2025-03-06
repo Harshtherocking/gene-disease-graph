@@ -2,11 +2,14 @@ import dgl
 import torch
 import networkx as nx
 import matplotlib.pyplot as plt
+import os
 
 # Load the graph from the binary file
-graph_path = "gene-disease-graph/graph.bin"
+home = os.getcwd()
+graph_path = os.path.join(home, "GRAPH")
 graph, _ = dgl.load_graphs(graph_path)
 g = graph[0]  # Load the first graph
+print(g)
 
 # Move graph to GPU if available
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
