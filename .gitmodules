@@ -1,0 +1,3 @@
+[submodule "BiANE"]
+	path = BiANE
+	url = https://github.com/fukien/BiANE.git
