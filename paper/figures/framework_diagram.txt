@@ -1,0 +1,39 @@
+This is a descriptive placeholder for the framework diagram (Figure 1) to be created in a graphics program.
+
+The diagram should illustrate the following components of the gene-disease association prediction framework:
+
+1. INPUT:
+   - Gene-Disease Association Graph (bipartite graph with genes and diseases as nodes)
+   - Each node labeled with its type (gene/disease)
+   - Existing associations shown as edges
+
+2. DATA PREPARATION:
+   - Graph splitting into train/validation/test sets
+   - Negative sampling process
+   - Optional: creation of smaller subgraphs for efficient experimentation
+
+3. MODEL ARCHITECTURES (showing the four main GNN variants):
+   - GCN: Illustrate the graph convolution operation
+   - GAT: Show attention mechanism between nodes
+   - GraphSAGE: Depict the sample-and-aggregate approach
+   - SEAL: Show how enclosing subgraphs are extracted around target links
+
+4. TRAINING PROCESS:
+   - Loss function visualization
+   - Validation on held-out edges
+   - Model selection based on validation performance
+
+5. LINK PREDICTION:
+   - Application of trained model to predict new gene-disease associations
+   - Ranking of predicted associations by confidence score
+
+6. EVALUATION:
+   - Performance metrics (AUC, AP, F1, etc.)
+   - Comparison visualization between different models
+
+Suggested visual style:
+- Use a left-to-right flow to show the full pipeline
+- Use distinct colors for genes and diseases
+- Use dashed lines for predicted associations
+- Include small graphs illustrating how each GNN operates on the same example
+- Add a magnified view of subgraphs to show model operations in detail 

@@ -1,0 +1,22 @@
+\begin{table}[!t]
+\caption{Performance Comparison of Different Models}
+\label{table_performance}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+\textbf{Model} & \textbf{AUC} & \textbf{AP} & \textbf{F1} & \textbf{Training Time (s)} \\
+\midrule
+GraphSAGE & 0.994 & 0.992 & 0.975 & 0.00 \\
+GAT & 0.994 & 0.991 & 0.974 & 0.00 \\
+SEAL & 0.972 & 0.839 & 0.899 & 6.60 \\
+GraphSAGE & 0.958 & 0.844 & 0.883 & 2.53 \\
+GCN & 0.952 & 0.908 & 0.943 & 2.18 \\
+GCN & 0.942 & 0.907 & 0.915 & 0.00 \\
+GAT & 0.910 & 0.817 & 0.884 & 2.16 \\
+DeepWalk & 0.877 & 0.952 & 0.890 & 5.51 \\
+Node2Vec & 0.862 & 0.869 & 0.920 & 5.05 \\
+Heuristic (RF) & 0.831 & 0.790 & 0.764 & 2.58 \\
+MF & 0.758 & 0.781 & 0.814 & 1.53 \\
+\bottomrule
+\end{tabular}
+\end{table}
